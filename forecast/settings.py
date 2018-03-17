@@ -25,12 +25,13 @@ SECRET_KEY = '@m$r^^m2ne10!d7yyo@4w$z3$f#7c1ggp=ez0+)gtyh0_mdf5m'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["140.143.247.178"]
+ALLOWED_HOSTS = ["140.143.247.178","127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -74,10 +75,19 @@ WSGI_APPLICATION = 'forecast.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': 'forecast',
+    #     'USER': 'jiangzheng',
+    #     'PASSWORD': '901126',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '3306',
+    # }
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+
 }
 
 
