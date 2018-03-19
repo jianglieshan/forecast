@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'forecast',
         'USER': 'jiangzheng',
         'PASSWORD': '123456',
-        'HOST': '127.0.0.1',
+        'HOST': '140.143.247.178',
         'PORT': '3306',
     }
     # 'default': {
