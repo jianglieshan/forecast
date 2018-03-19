@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["140.143.247.178","127.0.0.1"]
 # Application definition
 
 INSTALLED_APPS = [
+    'account',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,18 +76,18 @@ WSGI_APPLICATION = 'forecast.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'forecast',
-    #     'USER': 'jiangzheng',
-    #     'PASSWORD': '901126',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3306',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'forecast',
+        'USER': 'jiangzheng',
+        'PASSWORD': '123456',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
 
 }
 

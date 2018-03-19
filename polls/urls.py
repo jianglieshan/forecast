@@ -1,6 +1,6 @@
-from django.urls import path
-
+from django.urls import path,include
 from . import views
+from .controller import account
 app_name = 'polls'
 
 
@@ -9,6 +9,10 @@ urlpatterns = [
     path('<int:pk>/', views.DetailView.as_view(), name='detail'),
     path('<int:pk>/results/', views.ResultsView.as_view(), name='results'),
     path('<int:question_id>/vote/', views.vote, name='vote'),
+    path('login', account.index, name='login'),
+    path('accounts/', include('django.contrib.auth.urls')),
+    #path('login', account.login, name='login'),
+    #path('login', account.login, name='login'),
 ]
 
 # urlpatterns = [
